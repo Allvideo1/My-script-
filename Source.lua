@@ -1172,8 +1172,7 @@ function Library:Window(Text)
             
             TextBox.FocusLost:Connect(function(Enter)
                 if #TextBox.Text > 0 then
-                    if Enter then
-                        TextBox:TweenSize(UDim2.new(0,192,0,26),"Out","Quart",0.1,true)
+                                      TextBox:TweenSize(UDim2.new(0,192,0,26),"Out","Quart",0.1,true)
                         
                         local Text = TextBox.Text
                         
@@ -1182,10 +1181,7 @@ function Library:Window(Text)
                         end
                         
                         pcall(Callback,Text)
-                    end
-                else
-                    TextBox:TweenSize(UDim2.new(0,192,0,26),"Out","Quart",0.1,true)
-                end
+                        end          
             end)
             
             ItemHolder.CanvasSize = UDim2.new(0,0,0,ItemHolderList.AbsoluteContentSize.Y)
